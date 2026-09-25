@@ -14,7 +14,7 @@ Luego abre http://localhost:4173.
 
 - Cada pull request ejecuta npm test.
 - Cada push a main (incluidos merges) ejecuta los tests y, si pasan, despliega a Vercel.
-- El despliegue usa el proyecto vinculado de El Chambas en la cuenta de Vercel.
+- El despliegue usa el proyecto vinculado de El Chambas en la cuenta de Vercel y queda protegido por los tests.
 - El workflow usa los secretos VERCEL_TOKEN, VERCEL_ORG_ID y VERCEL_PROJECT_ID.
 - El proyecto de producción de Vercel es el-chambas-landing.
 
