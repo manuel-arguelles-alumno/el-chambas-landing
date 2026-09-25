@@ -29,6 +29,7 @@ test("front-end sources parse and include the intended interaction", () => {
   execFileSync(process.execPath, ["--check", join(root, "script.js")], { stdio: "pipe" });
   assert.match(read("styles.css"), /@media \(max-width: 820px\)/);
   assert.match(read("script.js"), /IntersectionObserver/);
+  assert.doesNotMatch(read("script.js"), /style\.opacity/);
 });
 
 test("landing has SEO and accessible navigation essentials", () => {
