@@ -10,6 +10,13 @@ No requiere build. Sirve la carpeta con cualquier servidor estático:
 
 Luego abre http://localhost:4173.
 
+## CI/CD
+
+- Cada pull request ejecuta npm test.
+- Cada push a main (incluidos merges) ejecuta los tests y, si pasan, despliega a Vercel.
+- El workflow usa los secretos VERCEL_TOKEN, VERCEL_ORG_ID y VERCEL_PROJECT_ID.
+- El proyecto de producción de Vercel es el-chambas-landing.
+
 ## Contenido
 
 - index.html: estructura y contenido de la landing.
