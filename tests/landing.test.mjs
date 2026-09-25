@@ -10,6 +10,10 @@ const read = (file) => readFileSync(join(root, file), "utf8");
 test("landing contains the primary page and referenced assets", () => {
   const html = read("index.html");
   assert.match(html, /<html lang="es">/);
+  assert.match(html, /Postula con hechos/);
+  assert.match(html, /El Chambas conecta/);
+  assert.match(html, /Sin inventar experiencia/);
+  assert.match(html, /https:\/\/agente\.elchambas\.com\//);
   assert.match(html, /assets\/hero-route\.png/);
   assert.match(html, /assets\/el-chambas-promo\.mp4/);
   assert.ok(existsSync(join(root, "assets/hero-route.png")));
@@ -23,8 +27,18 @@ test("visual assets are not empty placeholders", () => {
 
 test("front-end sources parse and include the intended interaction", () => {
   execFileSync(process.execPath, ["--check", join(root, "script.js")], { stdio: "pipe" });
-  assert.match(read("styles.css"), /@media\(max-width:820px\)/);
+  assert.match(read("styles.css"), /@media \(max-width: 820px\)/);
   assert.match(read("script.js"), /IntersectionObserver/);
+});
+
+test("landing has SEO and accessible navigation essentials", () => {
+  const html = read("index.html");
+  assert.match(html, /rel="canonical" href="https:\/\/elchambas\.com\//);
+  assert.match(html, /class="skip-link"/);
+  assert.match(html, /aria-label="Navegación principal"/);
+  assert.match(html, /aria-label="Video promocional de El Chambas/);
+  assert.ok(existsSync(join(root, "robots.txt")));
+  assert.ok(existsSync(join(root, "sitemap.xml")));
 });
 
 test("promotional video is exactly 60 seconds when ffprobe is available", () => {
