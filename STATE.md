@@ -4,7 +4,7 @@
 Phase 1 — landing pública.
 
 ## Current Task
-Landing implementada y publicada en el repositorio secundario; GitHub Pages habilitado.
+Landing implementada y publicada en el repositorio secundario; GitHub Pages y Vercel habilitados.
 
 ## Decisions Made
 - Sitio estático separado del backend de El Chambas.
@@ -13,7 +13,7 @@ Landing implementada y publicada en el repositorio secundario; GitHub Pages habi
 - Se generó una ilustración de hero sin texto para evitar competir con el copy.
 
 ## Blockers
-Ninguno conocido. GitHub Pages puede tardar unos minutos en servir la primera versión.
+Ninguno conocido. El pipeline de GitHub Actions fue verificado con tests y despliegue exitosos.
 
 ## Next Action
-Revisar la URL pública y añadir analytics o un CTA de producto solo si se decide más adelante.
+Mantener el flujo: cada PR ejecuta tests; cada merge a `main` despliega a Vercel.

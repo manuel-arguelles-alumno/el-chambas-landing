@@ -7,3 +7,4 @@
 - [x] Integrar hero visual generado para el proyecto.
 - [x] Publicar repositorio.
 - [x] Configurar GitHub Pages.
+- [x] Configurar Vercel y CI/CD.
