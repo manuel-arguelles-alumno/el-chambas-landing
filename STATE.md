@@ -4,7 +4,7 @@
 Phase 1 — landing pública.
 
 ## Current Task
-Landing implementada localmente; pendiente publicación en el repositorio secundario.
+Landing implementada y publicada en el repositorio secundario; GitHub Pages habilitado.
 
 ## Decisions Made
 - Sitio estático separado del backend de El Chambas.
@@ -13,7 +13,7 @@ Landing implementada localmente; pendiente publicación en el repositorio secund
 - Se generó una ilustración de hero sin texto para evitar competir con el copy.
 
 ## Blockers
-Ninguno local. Falta crear/publicar el repositorio remoto.
+Ninguno conocido. GitHub Pages puede tardar unos minutos en servir la primera versión.
 
 ## Next Action
-Validar visualmente y publicar manuel-arguelles-alumno/el-chambas-landing.
+Revisar la URL pública y añadir analytics o un CTA de producto solo si se decide más adelante.
